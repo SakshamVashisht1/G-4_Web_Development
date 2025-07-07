@@ -124,3 +124,10 @@ function cb(){
     console.log("I am CB function");
 }
 xyz(cb);
+
+function foodOrder(cb){
+
+
+}
+
+function pay
