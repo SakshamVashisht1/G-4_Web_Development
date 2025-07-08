@@ -145,6 +145,21 @@ async function fetchProducts() {
         }))
 
         console.log(products)
+
+        const productsContainer = document.getElementById('products')
+        let htmlContent = ''
+
+        products.forEach((product) => {
+            htmlContent += `
+                <div>
+                    <h3>${product.title}</h3>
+                    <p>${product.description}</p>
+                    <p>Price: $${product.price}</p>
+                </div>
+            `
+        })
+
+        productsContainer.innerHTML = htmlContent
     } catch (err) {
         console.log('ERROR OCCURED: ', err.message)
     }
