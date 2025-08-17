@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title> THIS IS HOME PAGE</title>
+    </head>
+
+    <body>
+        <h1> THIS IS PRODUCT PAGE</h1>
+        <ul class='people_list'>
+            {{#each products}}
+                <li>{{this}}</li>
+            {{/each}}
+        </ul>
+
+        <h2>Upload a Product Image</h2>
+        <form action='/products' method='POST' enctype='multipart/form-data'>
+            <div>
+                <label for='image'>Choose image:</label>
+                <input type='file' id='image' name='image' accept='image/*' />
+            </div>
+            <div>
+                <input type='submit' value='Upload Image' />
+            </div>
+        </form>
+    </body>
+</html>
